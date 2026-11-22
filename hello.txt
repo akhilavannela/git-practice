@@ -1,1 +1,65 @@
 Hello GitHub
+
+#!/bin/bash
+
+echo "===== DEVOPS AUTOMATION SCRIPT ====="
+
+# 1. Variables
+name="Akhila"
+role="DevOps Beginner"
+
+echo "Name: $name"
+echo "Role: $role"
+
+# 2. For loop
+echo "Counting numbers:"
+
+for i in 1 2 3 4 5
+do
+    echo "Number: $i"
+done
+
+# 3. While loop
+echo "Countdown:"
+
+count=5
+
+while [ $count -gt 0 ]
+do
+    echo "$count"
+    count=$((count - 1))
+done
+
+# 4. If-else condition
+echo "Checking user..."
+
+if id akhila &>/dev/null
+then
+    echo "User exists"
+else
+    echo "User not found"
+fi
+
+# 5. Create directory
+mkdir -p devops-output
+
+echo "Directory created successfully"
+
+# 6. Create file
+touch devops-output/report.txt
+
+echo "DevOps practice completed" > devops-output/report.txt
+
+# 7. Display date and time
+echo "Current date and time:"
+date
+
+# 8. Display system information
+echo "Current user:"
+whoami
+
+echo "Current directory:"
+pwd
+
+echo "===== SCRIPT COMPLETED ====="
+
